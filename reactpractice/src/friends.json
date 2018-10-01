@@ -82,5 +82,26 @@
     "image": "http://static.tvtropes.org/pmwiki/pub/images/ickis.png",
     "occupation": "Ahhhh! A Real Monster!",
     "location": "Under a City Dump"
+  },
+  {
+    "id": 13,
+    "name": "Ren",
+    "image": "https://vignette.wikia.nocookie.net/renandstimpy/images/a/ae/Comic_Ren.png/revision/latest?cb=20130323210114",
+    "occupation": "Cashier",
+    "location": "O-Town, California"
+  },
+  {
+    "id": 14,
+    "name": "Stimpy",
+    "image": "https://vignette.wikia.nocookie.net/renandstimpy/images/7/76/220px-Stimpy.jpg/revision/latest?cb=20130430000511",
+    "occupation": "Superhero",
+    "location": "Earth"
+  },
+  {
+    "id": 15,
+    "name": "Arnold",
+    "image": "https://i.pinimg.com/originals/d2/ca/74/d2ca74e1b7301930aba424dca3d23b63.jpg",
+    "occupation": "Ahhhh! A Real Monster!",
+    "location": "Under a City Dump"
   }
 ]

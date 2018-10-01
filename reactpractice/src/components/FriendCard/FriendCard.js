@@ -4,9 +4,7 @@ import "./FriendCard.css";
 const FriendCard = props => (
   <div className="card">
     <div className="img-container">
-    <span onClick={() => props.removeFriend(props.id)} className="remove">
-      <img alt={props.name} src={props.image} />
-    </span>
+      <img alt={props.name} src={props.image} onClick={() => props.handleIncrement(props.id)}/>
     </div>
   </div>
 );
