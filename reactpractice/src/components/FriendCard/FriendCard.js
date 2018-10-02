@@ -4,7 +4,7 @@ import "./FriendCard.css";
 const FriendCard = props => (
   <div className="card">
     <div className="img-container">
-      <img alt={props.name} src={props.image} onClick={() => props.handleIncrement(props.id)}/>
+      <img alt={props.name} src={props.image} onClick={() => props.clickCount(props.id)}/>
     </div>
   </div>
 );

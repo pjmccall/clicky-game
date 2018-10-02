@@ -5,6 +5,8 @@ import Instructions from "./components/Instructions";
 import friends from "./friends.json";
 import "./App.css";
 
+let count = 0;
+
 class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
@@ -20,17 +22,35 @@ class App extends Component {
 //    this.setState({ friends });
 //  };
 
-  handleIncrement = () => {
-    // We always use the setState method to update a component's state
-    this.setState({ count: this.state.count + 1 });
-    this.setState({ friends });
-  };
-  
-  clickCounter = () => {
-    // We always use the setState method to update a component's state
-    this.setState({ clickCount: this.state.clickCount + 1 });
-    this.setState({ friends });
-  };
+clickCount = id => {
+  const friends = this.state.friends;
+  const cardClick = friends.filter(friend => friend.id === id);
+
+  if (cardClick[0].click) {
+
+    count = 0;
+
+    for (let i = 0; i < friends.length; i++) {
+      friends[i].click = false;
+    }
+
+    this.setState({count});
+    this.setState({friends});
+
+  } else {
+    cardClick[0].click = true;
+
+    count = count + 1;
+
+
+    friends.sort((y, z) => {
+      return 0.5 - Math.random();
+    });
+
+    this.setState({friends});
+    this.setState({count});
+  }
+};
 
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
@@ -40,12 +60,11 @@ class App extends Component {
         <Instructions></Instructions>
         {this.state.friends.map(friend => (
           <FriendCard
-            handleIncrement={this.handleIncrement}
+            clickCount={this.clickCount}
             id={friend.id}
             name={friend.name}
             key={friend.id}
             image={friend.image}
-            clickCount={this.state.clickCount}
           />
         ))}
       </Wrapper>
